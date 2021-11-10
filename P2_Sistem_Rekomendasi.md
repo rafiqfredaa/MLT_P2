@@ -9,6 +9,11 @@ Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek
 - Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
   
   Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+<h3> Latar Belakang </h3>
+
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68459186/138650396-7b5242eb-4287-4b70-af33-ab6465db02e1.png">
+</p>
 
 ## Business Understanding
 
@@ -35,7 +40,7 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
 
-    ### Solution statements
+### Solution statements
     - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
 
 ## Data Understanding
@@ -50,6 +55,38 @@ Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+
+![image](https://user-images.githubusercontent.com/68459186/141079123-f30c3cfa-ce32-458d-8110-c116a8c2a5bb.png)
+
+Informasi dataset :
+
+| Hal                     | Keterangan                                                                              |
+| ----------------------- | --------------------------------------------------------------------------------------- |
+| Sumber                  | [Kaggle Dataset : Anime Recommendation Database](https://www.kaggle.com/CooperUnion/anime-recommendations-database) |
+| Lisensi                 | CC0: Public Domain                                                                      |
+| Kategori                | Movie and TV Shows, Anime and Manga, Comics and Animation, Popular Culture              |
+| Rating Penggunaan       | 8.2                                                                                     |
+| Jenis dan Ukuran Berkas | CSV (112.34 MB)                                                                         |
+
+### Deskripsi Variabel
+
+Kumpulan data didapatkan dari myanimaelist.net API, berisikan informasi tentang data preferensi pengguna dari 73.516 pengguna pada 12.294 anime. Setiap pengguna dapat menambahkan anime ke daftar lengap mereka dan memberikan peringkat dan kumpulan data ini adalah kompilasi dari peringkat tersebut.
+
+Variabel pada dataset :
+- Anime.csv
+  - anime_id = id unik myanimelist.net yang mengidentifikasi anime.
+  - name = nama lengkap anime.
+  - genre = daftar genre yang dipidahkan koma untuk anime.
+  - type = film, TV, OVA, dll.
+  - episodes = berapa banyak episode dalam acara ini. (1 jika film).
+  - rating = rating rata-rata dari 10 untuk anime.
+  - members = jumlah anggota komunitas yang ada di anime (kelompok).
+
+- Rating.csv
+  - user_id = ID pengguna yang dibuat secara acak yang tidak dapat diidentifikasi.
+  - anime_id = anime yang telah dinilai oleh pengguna.
+  - rating = rating dari 10 yang telah ditetapkan pengguna (-1 jika pengguna menentonnya tetapi tidak memberikan rating).   
+
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
