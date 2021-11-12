@@ -17,44 +17,24 @@ Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek
 
 ## Business Understanding
 
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
 
 Menjelaskan pernyataan masalah:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Bagaimana cara mengolah data yang dapat dilakukan pada data anime dan rating?
+- Bagaimana membuat sistem rekomendasi yang dipersonalisasi dengan teknik content-based filtering dan collaborative filtering?
+- Bagaimana website myanimelist.net dapat merekomendasikan anime yang mungkin disukai atau diminati oleh pengguna?
 
 ### Goals
 
 Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+- Melakukan pengolahan data terhadap data anime dan rating sehingga dapat digunakan untuk membuat sistem rekomendasi.
+- Membuat sejumlah rekomendasi anime yang dipersonalisasi untuk pengguna menggunakan teknik content-based filtering dan collaborative filtering.
+- Membuat sejumlah rekomendasi anime yang sesuai dengan preferensi pengguna dan membuat daftar top 10 anime yang mungkin belum pernah dilihat sebelumnya menggunakan teknik content-based filtering dan collaborative filtering.
 
 ### Solution statements
-    - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
+- Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
-
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
 
 ![image](https://user-images.githubusercontent.com/68459186/141079123-f30c3cfa-ce32-458d-8110-c116a8c2a5bb.png)
 
@@ -87,8 +67,27 @@ Variabel pada dataset :
   - anime_id = anime yang telah dinilai oleh pengguna.
   - rating = rating dari 10 yang telah ditetapkan pengguna (-1 jika pengguna menentonnya tetapi tidak memberikan rating).   
 
+### Univariate Exploratory Data Analysis
+- Data Anime
+- Data Rating
+
+
+### Data Preprocessing
+- Menggabungkan data anime dengan data rating
+- Melihat data anime
+
+
+**Rubrik/Kriteria Tambahan (Opsional)**:
+- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+
 
 ## Data Preparation
+
+Pada tahap ini dilakukan proses data preparation sebagai berikut : 
+- Mengatasi Missing Value
+- Memfilter user_id
+- Melakukan Pivot pada Tabel
+
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
