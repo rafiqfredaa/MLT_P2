@@ -46,12 +46,12 @@ Informasi dataset :
 | Rating Penggunaan       | 8.2                                                                                     |
 | Jenis dan Ukuran Berkas | CSV (112.34 MB)                                                                         |
 
-### Deskripsi Variabel
+### Univariate Exploratory Data Analysis
 
 Kumpulan data didapatkan dari myanimaelist.net API, berisikan informasi tentang data preferensi pengguna dari 73.516 pengguna pada 12.294 anime. Setiap pengguna dapat menambahkan anime ke daftar lengap mereka dan memberikan peringkat dan kumpulan data ini adalah kompilasi dari peringkat tersebut.
 
 Variabel pada dataset :
-- Anime.csv
+- Anime
   - anime_id = id unik myanimelist.net yang mengidentifikasi anime.
   - name = nama lengkap anime.
   - genre = daftar genre yang dipisahkan koma untuk anime.
@@ -60,15 +60,10 @@ Variabel pada dataset :
   - rating = rating rata-rata dari 0 hingga 10 untuk anime.
   - members = jumlah anggota komunitas yang ada di anime (kelompok).
 
-- Rating.csv
+- Rating
   - user_id = ID pengguna yang dibuat secara acak yang tidak dapat diidentifikasi.
   - anime_id = anime yang telah dinilai oleh pengguna.
   - rating = rating dari 10 yang telah ditetapkan pengguna (-1 jika pengguna menentonnya tetapi tidak memberikan rating).   
-
-### Univariate Exploratory Data Analysis
-- Data Anime
-- Data Rating
-
 
 ### Data Preprocessing
 - Menggabungkan data anime dengan data rating. Dilakukan dengan menggunakan fungsi 'pd.merge'. Hal ini dilakukan dengan tujuan agar kita dapat melihat informasi dengan lebih baik dan melihat informasi secara keseluruhan. Dengan begitu, dapat dilakukan proses visualisasi data untuk melihat persebaran data pada dataset yang digunakan. 
