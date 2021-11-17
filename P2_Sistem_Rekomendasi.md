@@ -68,27 +68,46 @@ Variabel pada dataset :
 
 
 ### Data Preprocessing
-- Menggabungkan data anime dengan data rating
+- Menggabungkan data anime dengan data rating. Dilakukan dengan menggunakan fungsi 'pd.merge'. Hal ini dilakukan dengan tujuan agar kita dapat melihat informasi dengan lebih baik dan melihat informasi secara keseluruhan. Dengan begitu, dapat dilakukan proses visualisasi data untuk melihat persebaran data pada dataset yang digunakan. 
 - Melihat data anime
   - Top 10 Anime Berdasarkan Jumlah Rating
     
     ![image](https://user-images.githubusercontent.com/68459186/142178348-e82e45d2-df46-4135-80fb-d2a8efeed730.png)
+    
+    10 anime dengan jumlah rating tertinggi. Peringkat pertama diduduki anime Death Note, kemudian disusul anime Sword Art Online pada posisi kedua dan pada posisi ketiga ada anime Shingeki no Kyojin. 
 
   - Top 10 Anime Berdasarkan Jumlah Anggota Komunitas
     
     ![image](https://user-images.githubusercontent.com/68459186/142178382-0071619b-1b78-4cb9-ac8f-054706044999.png)
+    
+    10 anime teratas berdasarkan jumlah anggota komunitasnya. Pada peringkat pertama ada anime Death Note, peringkat kedua ada anime Shingeki no Kyojin, dan posisi ketiga ada Sword Art Online.
 
   - Melihat Data Distribusi Rating
     
     ![image](https://user-images.githubusercontent.com/68459186/142178415-fe52dcf5-633d-499c-ba08-7b2f0680c39c.png)
+    
+    Didapatkan bahwa : 
+    - Sebagian besar rating terdapat pada rentang 6 hingga 10
+    - Nilai modus distribusi sekitar 7.5 hingga 8.0
+    - Terdapat peringkat -1 sebagai outlier dalam rating user yang dapat dibuat menjadi NaN 
 
   - Media untuk Menonton/Streaming
     
     ![image](https://user-images.githubusercontent.com/68459186/142178442-587ce5af-0192-4874-adf0-02c4ecbb96de.png)
+    
+    Didapatkan bahwa :
+    - Anime terbanyak ditayangkan di TV sejumlah 5.283.596 atau sektiar 67.6% dari total data. 
+    - Anime penayangan melalui Movie sebanyak 13.5%.
+    - Anime di streaming dalam OVA sebesar 10.2%. 
+    - Anime ditonton dalam Special sebesar 7.16%.
+    - Anime ditonton dalam ONA sebesar 1.18%.
+    - Anime ditonton dalam music sebesar 0.339%.
 
   - Genre Anime yang Populer
     
     ![image](https://user-images.githubusercontent.com/68459186/142178461-bc3c742c-c6f1-4aad-812d-67ccd5da931d.png)
+    
+    Didapatkan bahwa terdapat banyak genre anime pada dataset, genre yang paling banyak adalah comedy, action, romace, drama, dan school, serta masih ada genre lainnya pada dataset.
 
 ## Data Preparation
 
