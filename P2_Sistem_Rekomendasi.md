@@ -110,9 +110,9 @@ Variabel pada dataset :
 ## Data Preparation
 
 Pada tahap ini dilakukan proses data preparation sebagai berikut : 
-- Membersihkan Data pada Variabel name
-- Mengatasi Missing Value
-- Menghapus Data yang Duplikat
+- Membersihkan Data pada Variabel name. Pada tahap ini dilakukan pembersihan pada variabel name dengan cara membuat sebuah fungsi "text_cleaning". Fungsi ini digunakan untuk menghapus kata-kata yang tidak diperlukan seperti &quot, &#039, &amp, dan sebagainya. Sehingga didapatkan data pada variabel name bersih dan hanya tersisa data judul anime yang sesuai. Dengan begitu, kita mendapatkan data pada variabel name bersih dan siap untuk digunakan untuk membuat model rekomendasi. 
+- Mengatasi Missing Value. Pada tahap ini dilakukan penghapusan data yang memiliki nilai kosong atau NaN terkhusus pada bagian variabel rating. Sebelumnya, dilakukan proses penggantian pada variabel rating nilai -1 yang terdapat pada variabel rating diganti dengan nilai NaN. Setelah itu, data yang memiliki nilai NaN tersebut dihapus. Selanjutnya, juga dilakukan proses pengisian pada bagian variabel genre apabila ada data yang memiliki nilai NaN maka ada diisi dengan nilai string kosong. 
+- Membuat pandas series dan mengembalikan series dengan menghilangkan data yang duplikat. Pada tahap ini dilakukan dengan menggunakan fungsi "pd.Series", serta fungsi "drop_duplicates" untuk mengembalikan nilai series dengan menghilangkan data yang duplikat. Dengan begitu, dibuat sebuah data baru yang berbentuk array berlabel satu dimensi yang mampu menampung data jenis apa pun. Label sumbu secara kolektif disebut indeks. Label tidak harus unik tetapi harus bertipe hashable. Objek mendukung pengindeksan berbasis bilangan bulat dan label, serta menyediakan sejumlah metode untuk melakukan operasi yang melibatkan indeks.  
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
