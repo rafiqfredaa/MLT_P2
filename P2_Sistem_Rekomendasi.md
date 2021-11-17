@@ -1,18 +1,13 @@
 # Laporan Proyek Machine Learning - Rafiq Freda Aryanta
 
 ## Project Overview
-
-Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa proyek ini penting untuk diselesaikan.
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+ 
 <h3> Latar Belakang </h3>
 
+Anime ((bahasa Jepang: アニメ) adalah animasi dari jepang yang digambar dengan tangan maupun menggunakan teknologi komputer. Kata _anime_ merupakan singkatan dari "_animation_" dalam bahasa Inggris, yang merujuk pada semua jenis animasi. Di luar Jepang, istilah ini digunakan secara spesifik untuk menyebutkan segala animasi yang diproduksi di Jepang. dengan melihat data pencarian anime di google seperti yang terdapat pada gambar diatas dapat diketahui sejak tahun 2004 hingga sekarang terjadi peningkatan dalam hal pencarian tetang anime. Terlebih, ketika masa pandemi sekarang kebanyak orang beraktifitas dirumah dan salah satu kegiatan yang dapat dilakukan adalah menonton film, series, anime, dan sebagainya. Dapat diketahui juga anime yang telah diproduksi sendiri sudah sangat banyak. Terdapat banyak website yang memuat anime entah legal maupun yang ilegal. Misalnya, myanimelist.net merupakan sebuah website yang memiliki konten anime yang dapat ditonton secara online. Menurut data dari google trends diketahui negara-negara dengan pengguna terbanyak yang melakukan pencarian tentang anime, yaitu Philippines, El Salvador, Bolivia, Indonesia, dan Myanmar. Terkadang pengguna kesulitan untuk memilih anime yang sesuai dengan preferensi mereka karena banyaknya anime yang ada dalam website. Sehingga diperlukan waktu yang lebih untuk melihat satu per satu anime yang akan ditonton apakah sesuai atau tidak dengan minat pengguna. Untuk itu, perlu dikembangkan sebuah sistem rekomendasi yang dapat membantu pengguna untuk mencari tahu anime yang sesuai dengan preferensi mereka atau mirip dengan anime yang mereka suka atau telah ditonton sebelumnya.
+
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/68459186/138650396-7b5242eb-4287-4b70-af33-ab6465db02e1.png">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68459186/142177046-f307e5f8-10e2-4172-b61f-4e77f47ce855.png">
 </p>
 
 ## Business Understanding
@@ -20,16 +15,16 @@ Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek
 ### Problem Statements
 
 Menjelaskan pernyataan masalah:
-- Bagaimana cara mengolah data yang dapat dilakukan pada data anime dan rating?
-- Bagaimana membuat sistem rekomendasi yang dipersonalisasi dengan teknik content-based filtering dan collaborative filtering?
+- Bagaimana cara mengolah data dan memilih fitur pada data anime dan rating?
+- Bagaimana membuat sistem rekomendasi yang dipersonalisasi dengan teknik _content-based filtering_?
 - Bagaimana website myanimelist.net dapat merekomendasikan anime yang mungkin disukai atau diminati oleh pengguna?
 
 ### Goals
 
 Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
-- Melakukan pengolahan data terhadap data anime dan rating sehingga dapat digunakan untuk membuat sistem rekomendasi.
-- Membuat sejumlah rekomendasi anime yang dipersonalisasi untuk pengguna menggunakan teknik content-based filtering dan collaborative filtering.
-- Membuat sejumlah rekomendasi anime yang sesuai dengan preferensi pengguna dan membuat daftar top 10 anime yang mungkin belum pernah dilihat sebelumnya menggunakan teknik content-based filtering dan collaborative filtering.
+- Melakukan pengolahan data terhadap data anime dan rating sehingga dapat digunakan untuk membuat sistem rekomendasi, serta memilih fitur yang berguna.
+- Membuat rekomendasi anime yang dipersonalisasi untuk pengguna menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
+- Membuat sejumlah rekomendasi anime yang sesuai dengan preferensi pengguna dan membuat daftar top 10 anime yang mungkin belum pernah dilihat sebelumnya menggunakan teknik _content-based filtering_.
 
 ### Solution statements
 - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
@@ -75,24 +70,32 @@ Variabel pada dataset :
 ### Data Preprocessing
 - Menggabungkan data anime dengan data rating
 - Melihat data anime
+  - Top 10 Anime Berdasarkan Jumlah Rating
+    
+    ![image](https://user-images.githubusercontent.com/68459186/142178348-e82e45d2-df46-4135-80fb-d2a8efeed730.png)
 
+  - Top 10 Anime Berdasarkan Jumlah Anggota Komunitas
+    
+    ![image](https://user-images.githubusercontent.com/68459186/142178382-0071619b-1b78-4cb9-ac8f-054706044999.png)
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+  - Melihat Data Distribusi Rating
+    
+    ![image](https://user-images.githubusercontent.com/68459186/142178415-fe52dcf5-633d-499c-ba08-7b2f0680c39c.png)
 
+  - Media untuk Menonton/Streaming
+    
+    ![image](https://user-images.githubusercontent.com/68459186/142178442-587ce5af-0192-4874-adf0-02c4ecbb96de.png)
+
+  - Genre Anime yang Populer
+    
+    ![image](https://user-images.githubusercontent.com/68459186/142178461-bc3c742c-c6f1-4aad-812d-67ccd5da931d.png)
 
 ## Data Preparation
 
 Pada tahap ini dilakukan proses data preparation sebagai berikut : 
+- Membersihkan Data pada Variabel name
 - Mengatasi Missing Value
-- Memfilter user_id
-- Melakukan Pivot pada Tabel
-
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+- Menghapus Data yang Duplikat
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
