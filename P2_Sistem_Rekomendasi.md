@@ -51,10 +51,10 @@ Variabel pada dataset :
 - Anime.csv
   - anime_id = id unik myanimelist.net yang mengidentifikasi anime.
   - name = nama lengkap anime.
-  - genre = daftar genre yang dipidahkan koma untuk anime.
-  - type = film, TV, OVA, dll.
+  - genre = daftar genre yang dipisahkan koma untuk anime.
+  - type = media untuk menonton/streaming (Movie, TV, OVA, Special, Music, ONA, dan nan).
   - episodes = berapa banyak episode dalam acara ini. (1 jika film).
-  - rating = rating rata-rata dari 10 untuk anime.
+  - rating = rating rata-rata dari 0 hingga 10 untuk anime.
   - members = jumlah anggota komunitas yang ada di anime (kelompok).
 
 - Rating.csv
