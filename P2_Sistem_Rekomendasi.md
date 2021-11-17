@@ -23,11 +23,14 @@ Menjelaskan pernyataan masalah:
 
 Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
 - Melakukan pengolahan data terhadap data anime dan rating sehingga dapat digunakan untuk membuat sistem rekomendasi, serta memilih fitur yang berguna.
-- Membuat rekomendasi anime yang dipersonalisasi untuk pengguna menggunakan teknik _content-based filtering_ dan _collaborative filtering_.
-- Membuat sejumlah rekomendasi anime yang sesuai dengan preferensi pengguna dan membuat daftar top 10 anime yang mungkin belum pernah dilihat sebelumnya menggunakan teknik _content-based filtering_.
+- Membuat rekomendasi anime yang dipersonalisasi untuk pengguna menggunakan teknik _content-based filtering_.
+- Membuat sejumlah rekomendasi anime yang sesuai dengan preferensi pengguna dan membuat daftar 10 anime yang mungkin belum pernah dilihat sebelumnya menggunakan teknik _content-based filtering_.
 
 ### Solution statements
-- Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
+Berikut ini merupakan solusi yang mungkin dapat dilakukan :
+- Melihat data anime dan melihat secara menyeluruh setiap variabel untuk melihat hubungan antar variabel. Dengan begitu, dapat ditentukan variabel-variabel yang berhubungan dan sesuai dengan yang dibutuhkan. Pemrosesan data yang dapat dilakukan adalah membersihkan variabel name, menangani missing value, dan menghapus data yang duplikat.
+- Model rekomendasi yang dikembangkan menggunakan teknik _content-based filtering_. Teknik ini melakukan pemfilteran berbasis konten, juga disebut sebagai pemfilteran kognitif, merekomendasikan item berdasarkan perbandingan antara konten item dan profil pengguna. Konten setiap item direpresentasikan sebagai kumpulan deskriptor atau istilah, biasanya kata-kata yang muncul dalam dokumen. Rekomendasi berbasis konten bekerja dengan data yang diberikan pengguna, baik secara eksplisit (peringkat) atau implisit (mengklik tautan). Berdasarkan data tersebut, profil pengguna dibuat, yang kemudian digunakan untuk memberikan saran kepada pengguna. Saat pengguna memberikan lebih banyak masukan atau mengambil tindakan berdasarkan rekomndasi, mesin menjadi lebih akurat.
+- Rekomdasi yang dapat diberikan kepada pengguna dengan cara memberikan rekomendasi 10 anime terbaik yang memiliki rating paling tinggi, serta sesuai dengan preferensi pengguna.  
 
 ## Data Understanding
 
