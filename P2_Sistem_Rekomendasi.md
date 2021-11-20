@@ -29,8 +29,8 @@ Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
 ### Solution statements
 Berikut ini merupakan solusi yang mungkin dapat dilakukan :
 - Melihat data anime dan melihat secara menyeluruh setiap variabel untuk melihat hubungan antar variabel. Dengan begitu, dapat ditentukan variabel-variabel yang berhubungan dan sesuai dengan yang dibutuhkan. Pemrosesan data yang dapat dilakukan adalah membersihkan variabel name, menangani missing value, dan menghapus data yang duplikat.
-- Model rekomendasi yang dikembangkan menggunakan teknik _content-based filtering_. Teknik ini melakukan pemfilteran berbasis konten, juga disebut sebagai pemfilteran kognitif, merekomendasikan item berdasarkan perbandingan antara konten item dan profil pengguna. Konten setiap item direpresentasikan sebagai kumpulan deskriptor atau istilah, biasanya kata-kata yang muncul dalam dokumen. Rekomendasi berbasis konten bekerja dengan data yang diberikan pengguna, baik secara eksplisit (peringkat) atau implisit (mengklik tautan). Berdasarkan data tersebut, profil pengguna dibuat, yang kemudian digunakan untuk memberikan saran kepada pengguna. Saat pengguna memberikan lebih banyak masukan atau mengambil tindakan berdasarkan rekomndasi, mesin menjadi lebih akurat.
-- Rekomdasi yang dapat diberikan kepada pengguna dengan cara memberikan rekomendasi 10 anime terbaik yang memiliki rating paling tinggi, serta sesuai dengan preferensi pengguna.  
+- Model rekomendasi yang dikembangkan menggunakan teknik _content-based filtering_. Teknik ini melakukan pemfilteran berbasis konten, juga disebut sebagai pemfilteran kognitif, merekomendasikan item berdasarkan perbandingan antara konten item dan profil pengguna. Konten setiap item direpresentasikan sebagai kumpulan deskriptor atau istilah, biasanya kata-kata yang muncul dalam dokumen. Rekomendasi berbasis konten bekerja dengan data yang diberikan pengguna, baik secara eksplisit (peringkat) atau implisit (mengklik tautan). Berdasarkan data tersebut, profil pengguna dibuat, yang kemudian digunakan untuk memberikan saran kepada pengguna. Saat pengguna memberikan lebih banyak masukan atau mengambil tindakan berdasarkan rekomendasi, mesin menjadi lebih akurat.
+- Rekomendasi yang dapat diberikan kepada pengguna dengan cara memberikan rekomendasi 10 anime terbaik yang memiliki rating paling tinggi, serta sesuai dengan preferensi pengguna.  
 
 ## Data Understanding
 
@@ -48,7 +48,7 @@ Informasi dataset :
 
 ### Univariate Exploratory Data Analysis
 
-Kumpulan data didapatkan dari myanimaelist.net API, berisikan informasi tentang data preferensi pengguna dari 73.516 pengguna pada 12.294 anime. Setiap pengguna dapat menambahkan anime ke daftar lengap mereka dan memberikan peringkat dan kumpulan data ini adalah kompilasi dari peringkat tersebut.
+Kumpulan data didapatkan dari myanimaelist.net API, berisikan informasi tentang data preferensi pengguna dari 73.516 pengguna pada 12.294 anime. Setiap pengguna dapat menambahkan anime ke daftar lengkap mereka dan memberikan peringkat dan kumpulan data ini adalah kompilasi dari peringkat tersebut.
 
 Variabel pada dataset :
 - Anime
@@ -63,7 +63,7 @@ Variabel pada dataset :
 - Rating
   - user_id = ID pengguna yang dibuat secara acak yang tidak dapat diidentifikasi.
   - anime_id = anime yang telah dinilai oleh pengguna.
-  - rating = rating dari 10 yang telah ditetapkan pengguna (-1 jika pengguna menentonnya tetapi tidak memberikan rating).   
+  - rating = rating dari 10 yang telah ditetapkan pengguna (-1 jika pengguna menontonnya tetapi tidak memberikan rating).   
 
 ### Data Preprocessing
 - Menggabungkan data anime dengan data rating. Dilakukan dengan menggunakan fungsi 'pd.merge'. Hal ini dilakukan dengan tujuan agar kita dapat melihat informasi dengan lebih baik dan melihat informasi secara keseluruhan. Dengan begitu, dapat dilakukan proses visualisasi data untuk melihat persebaran data pada dataset yang digunakan. 
@@ -94,7 +94,7 @@ Variabel pada dataset :
     ![image](https://user-images.githubusercontent.com/68459186/142178442-587ce5af-0192-4874-adf0-02c4ecbb96de.png)
     
     Didapatkan bahwa :
-    - Anime terbanyak ditayangkan di TV sejumlah 5.283.596 atau sektiar 67.6% dari total data. 
+    - Anime terbanyak ditayangkan di TV sejumlah 5.283.596 atau sekitar 67.6% dari total data. 
     - Anime penayangan melalui Movie sebanyak 13.5%.
     - Anime di streaming dalam OVA sebesar 10.2%. 
     - Anime ditonton dalam Special sebesar 7.16%.
@@ -105,7 +105,7 @@ Variabel pada dataset :
     
     ![image](https://user-images.githubusercontent.com/68459186/142178461-bc3c742c-c6f1-4aad-812d-67ccd5da931d.png)
     
-    Didapatkan bahwa terdapat banyak genre anime pada dataset, genre yang paling banyak adalah comedy, action, romace, drama, dan school, serta masih ada genre lainnya pada dataset.
+    Didapatkan bahwa terdapat banyak genre anime pada dataset, genre yang paling banyak adalah comedy, action, romance, drama, dan school, serta masih ada genre lainnya pada dataset.
 
 ## Data Preparation
 
@@ -121,7 +121,7 @@ Pada proses pemodelan dilakukan proses,
 
 ![image](https://user-images.githubusercontent.com/68459186/142717852-d5f185ef-7b42-4bf9-9172-635b0370c908.png)
 
-- Sigmoid kernel, melakukan fungsi sigmoid pada data yang sudah dilakukan metrik TF-IDF dengan menggunakan metrik berpasangan untuk merepresentasi koleksi padat dan jarang. Pada hal ini diperlukan menetapkan nilai 1 untuk anime yang direkomendasikan dan nilai 0 untuk anime yang tidak direkomendasikan. 
+- Sigmoid kernel, melakukan fungsi sigmoid pada data yang sudah dilakukan matrik TF-IDF dengan menggunakan matrik berpasangan untuk merepresentasi koleksi padat dan jarang. Pada hal ini diperlukan menetapkan nilai 1 untuk anime yang direkomendasikan dan nilai 0 untuk anime yang tidak direkomendasikan. 
 
 ## Evaluation
 
