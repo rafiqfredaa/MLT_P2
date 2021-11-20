@@ -118,18 +118,24 @@ Pada tahap ini dilakukan proses data preparation sebagai berikut :
 
 Pada proses pemodelan dilakukan proses,
 - TF-IDF (Term Frequency and Inverse Document Frequency), matrik yang digunakan untuk menemukan representasi fitur penting dari setiap genre anime. Parameter yang digunakan adalah 'min_df=3' berarti ketika membangun abaikan istilah yang memiliki frekuensi dokumen lebih rendah dari ambang batas yang diberikan, 'max_features=None' berarti membuat kosakata yang hanya mempertimbangkan max_features teratas yang diurutkan berdasarkan frekuensi istilah di seluruh korpus, 'strip_accents='unicode'' berarti melakukan penghapusan aksen dan melakukan normalisasi selama langkah prapemrosesan - metode yang sedikit lebih lambat yang bekerja pada karakter apa pun, 'analyzer='word'' berarti memilih fitur dari kata-kata, 'token_pattern=r'\w{1,}'' berarti ekspresi egular yang menunjukkan apa yang merupakan 'token', 'ngram_range=(1,3)' berarti batas bawah dan batas atas kisaran nilai-n untuk n-gram berbeda yang akan diekstraksi, dan 'stop_words='english'' berarti mendeteksi dan memfilter kata berhenti yang semuanya akan dihapus dari token yang dihasilkan. 
+
+![image](https://user-images.githubusercontent.com/68459186/142717852-d5f185ef-7b42-4bf9-9172-635b0370c908.png)
+
 - Sigmoid kernel, melakukan fungsi sigmoid pada data yang sudah dilakukan metrik TF-IDF dengan menggunakan metrik berpasangan untuk merepresentasi koleksi padat dan jarang. Pada hal ini diperlukan menetapkan nilai 1 untuk anime yang direkomendasikan dan nilai 0 untuk anime yang tidak direkomendasikan. 
 
 ## Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+Hasil dari fungsi rekomendasi yang dibuat, dengan input 'One Piece' maka didapatkan anime rekomendasi sebagai berikut.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+![image](https://user-images.githubusercontent.com/68459186/142717738-fe533525-435f-4d15-b36d-703ffae05357.png)
+
+Sistem rekomendasi yang dibuat mampu memberikan 10 judul anime yang memiliki kemiripan pada variabel genre. Dengan demikian, sistem mampu memberikan rekomendasi kepada pengguna anime yang sekiranya sesuai dengan preferensi pengguna inginkan.
+
+
+## Referensi
+- Roshan, Ben. (2020). _Content & Collaborative Anime Recommendation_. Diakses pada 20 November 2021, dari https://www.kaggle.com/benroshan/content-collaborative-anime-recommendation/notebook#Table-of-Contents:.
+- Google Trends. Diakses pada 18 November 2021, dari https://trends.google.com/trends/explore?date=all&q=anime.
+- Anonim. (2021). _Anime_. Diakses pada 17 November 2021, dari https://id.wikipedia.org/wiki/Anime.
 
 **---Ini adalah bagian akhir laporan---**
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
