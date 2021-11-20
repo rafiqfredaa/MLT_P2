@@ -115,11 +115,10 @@ Pada tahap ini dilakukan proses data preparation sebagai berikut :
 - Membuat pandas series dan mengembalikan series dengan menghilangkan data yang duplikat. Pada tahap ini dilakukan dengan menggunakan fungsi "pd.Series", serta fungsi "drop_duplicates" untuk mengembalikan nilai series dengan menghilangkan data yang duplikat. Dengan begitu, dibuat sebuah data baru yang berbentuk array berlabel satu dimensi yang mampu menampung data jenis apa pun. Label sumbu secara kolektif disebut indeks. Label tidak harus unik tetapi harus bertipe hashable. Objek mendukung pengindeksan berbasis bilangan bulat dan label, serta menyediakan sejumlah metode untuk melakukan operasi yang melibatkan indeks.  
 
 ## Modeling
-Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
-- Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
+Pada proses pemodelan dilakukan proses,
+- TF-IDF (Term Frequency and Inverse Document Frequency), matrik yang digunakan untuk menemukan representasi fitur penting dari setiap kategori genre. Parameter yang digunakan adalah 'min_df=3' berarti ketika membangun abaikan istilah yang memiliki frekuensi dokumen lebih rendah dari ambang batas yang diberikan, 'max_features=None' berarti membuat kosakata yang hanya mempertimbangkan max_features teratas yang diurutkan berdasarkan frekuensi istilah di seluruh korpus, 'strip_accents='unicode'' berarti melakukan penghapusan aksen dan melakukan normalisasi selama langkah prapemrosesan - metode yang sedikit lebih lambat yang bekerja pada karakter apa pun, 'analyzer='word'' berarti memilih fitur dari kata-kata, 'token_pattern=r'\w{1,}'' berarti ekspresi egular yang menunjukkan apa yang merupakan 'token', 'ngram_range=(1,3)' berarti batas bawah dan batas atas kisaran nilai-n untuk n-gram berbeda yang akan diekstraksi, dan 'stop_words='english'' berarti mendeteksi dan memfilter kata berhenti yang semuanya akan dihapus dari token yang dihasilkan. 
+- Sigmoid kernel, melakukan fungsi sigmoid pada data yang sudah dilakukan metrik TF-IDF dengan menggunakan metrik berpasangan untuk merepresentasi koleksi padat dan jarang. Pada hal ini diperlukan menetapkan nilai 1 untuk anime yang direkomendasikan dan nilai 0 untuk anime yang tidak direkomendasikan. 
 
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
