@@ -131,6 +131,13 @@ Hasil dari fungsi rekomendasi yang dibuat, dengan input 'One Piece' maka didapat
 
 Sistem rekomendasi yang dibuat mampu memberikan 10 judul anime yang memiliki kemiripan pada variabel genre. Dengan demikian, sistem mampu memberikan rekomendasi kepada pengguna anime yang sekiranya sesuai dengan preferensi pengguna inginkan.
 
+Matrik Evaluasi
+
+Rumus matrik evaluasi yang digunakan pada proyek ini sebagai berikut:
+
+![image](https://user-images.githubusercontent.com/68459186/142819183-31eb7a8c-b19b-4f9c-a157-a032c90b1788.png)
+
+Dengan menggunakan rumus matrik diatas maka kita dapat menghitung tingkat akurasi dari model yang dibuat.
 
 ## Referensi
 - Roshan, Ben. (2020). _Content & Collaborative Anime Recommendation_. Diakses pada 20 November 2021, dari https://www.kaggle.com/benroshan/content-collaborative-anime-recommendation/notebook#Table-of-Contents:.
