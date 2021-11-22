@@ -138,6 +138,11 @@ Rumus matrik evaluasi yang digunakan pada proyek ini sebagai berikut:
 ![image](https://user-images.githubusercontent.com/68459186/142819183-31eb7a8c-b19b-4f9c-a157-a032c90b1788.png)
 
 Dengan menggunakan rumus matrik diatas maka kita dapat menghitung tingkat akurasi dari model yang dibuat.
+Matrik evaluasi untuk hasil rekomendasi diatas pada anime dengan judul "One Piece" sebagai berikut.
+
+- Precision = #of recommendation that are relevant/#of item we recommend.
+
+Dari total 10 anime yang direkomendasikan terdapat 8 anime yang memiliki genre yang sama persis dengan genre anime yang dicarikan rekomendasinya. Sehingga tingkat presisi dari model rekomendasi yang didapatkan adalah 8/10 atau 80%.
 
 ## Referensi
 - Roshan, Ben. (2020). _Content & Collaborative Anime Recommendation_. Diakses pada 20 November 2021, dari https://www.kaggle.com/benroshan/content-collaborative-anime-recommendation/notebook#Table-of-Contents:.
