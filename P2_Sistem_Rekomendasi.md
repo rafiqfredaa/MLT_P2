@@ -137,7 +137,7 @@ Rumus matrik evaluasi yang digunakan pada proyek ini sebagai berikut:
 
 ![image](https://user-images.githubusercontent.com/68459186/142819183-31eb7a8c-b19b-4f9c-a157-a032c90b1788.png)
 
-Dengan menggunakan rumus matrik diatas maka kita dapat menghitung tingkat akurasi dari model yang dibuat.
+Dengan menggunakan rumus matrik di atas maka kita dapat menghitung tingkat akurasi dari model yang dibuat.
 Matrik evaluasi untuk hasil rekomendasi diatas pada anime dengan judul "One Piece" sebagai berikut.
 
 - Precision = #of recommendation that are relevant/#of item we recommend.
